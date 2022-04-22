@@ -1,0 +1,14 @@
+{
+  "name": "yogahilmi-betest",
+  "version": "1.0.0",
+  "description": "Jenius Technical Test - Back End Developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yoga Hilmi Tasanah",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}

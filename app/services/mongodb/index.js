@@ -1,7 +1,8 @@
 module.exports = {
   connect: () => {
     require("mongoose").connect(
-      `mongodb://${process.env.HOSTMONGO}:${process.env.PORTMONGO}/db_yogahilmi_betest`,
+      process.env.MONGODB_URI ||
+        `mongodb://${process.env.HOSTMONGO}:${process.env.PORTMONGO}/db_faisal_betest`,
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,

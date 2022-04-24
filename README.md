@@ -2,7 +2,7 @@
 
 ## Heroku Deployment
 
-Endpoint : 
+Endpoint :
 https://ms-yogahilmi-betest.herokuapp.com
 
 ## Specification
@@ -90,13 +90,17 @@ Authorization: Bearer Token
 
 Authorization: Bearer Token
 
-Body:
+**Get User With Filter**
+
+> GET /api/user
+
+Authorization: Bearer Token
+
+Optional Query Params:
 
 ```
-{
-    "accountNumber" : "",
-    "identityNumber" : ""
-}
+accountNumber
+identityNumber
 ```
 
 **Update User**

@@ -1,14 +1,25 @@
 {
-  "name": "yogahilmi-betest",
+  "name": "ms-yogahilmi-betest",
   "version": "1.0.0",
   "description": "Jenius Technical Test - Back End Developer",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./app/app.js",
+    "dev": "nodemon ./app/app.js"
   },
   "author": "Yoga Hilmi Tasanah",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.3"
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.12",
+    "redis": "^3.1.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }

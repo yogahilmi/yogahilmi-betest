@@ -1,0 +1,45 @@
+version: "3.8"
+services:
+  betest:
+    container_name: yogahilmi-betest
+    build: .
+    networks:
+      - node-network
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./:/src
+      - /src/node_modules
+    environment:
+      HOSTMONGO: mongodb
+      PORTMONGO: 27017
+      HOSTREDIS: redis
+      PORTREDIS: 6379
+      PORT: 3000
+      JWT_SECRET: yogahilmi
+      JWT_EXPIRES_IN: 24h
+    command: npm run dev
+    depends_on:
+      - mongo
+      - redis
+  mongo:
+    container_name: mongodb
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+    networks:
+      - node-network
+  redis:
+    container_name: redis
+    image: redis:alpine
+    command: redis-server
+    ports:
+      - "6379:6379"
+    networks:
+      - node-network
+networks:
+  node-network:
+volumes:
+  mongodb-data:

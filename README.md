@@ -1,5 +1,10 @@
 # Microservices (Nodejs - Express)
 
+## Heroku Deployment
+
+Endpoint : 
+https://ms-yogahilmi-betest.herokuapp.com
+
 ## Specification
 
 - NodeJS

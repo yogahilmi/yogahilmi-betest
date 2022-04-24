@@ -1,6 +1,7 @@
 # Microservices (Nodejs - Express)
 
 ## Specification
+
 - NodeJS
 - ExpressJS
 - MongoDB
@@ -37,3 +38,82 @@ If you need to stop and remove all containers, networks, and all images used by 
 docker-compose down --rmi all
 ```
 
+# API Documentation
+
+## Auth /api/auth
+
+**Register User**
+
+> POST /api/auth/register
+
+Body:
+
+```
+{
+    "userName": "Yoga Hilmi Tasanah",
+    "emailAddress": "yogahilmi@mail.com",
+    "password": "12345678",
+    "accountNumber" : 8180620006,
+    "identityNumber" : 88181818
+}
+```
+
+**Login User**
+
+> POST /api/auth/login
+
+Body:
+
+```
+{
+    "emailAddress": "yogahilmi@mail.com",
+    "password": "12345678"
+}
+```
+
+## User /api/user/
+
+**Get All Users**
+
+> GET /api/user
+
+Authorization: Bearer Token
+
+**Get User By ID**
+
+> GET /api/user/{id}
+
+Authorization: Bearer Token
+
+Body:
+
+```
+{
+    "accountNumber" : "",
+    "identityNumber" : ""
+}
+```
+
+**Update User**
+
+> PATCH /api/user/{id}
+
+Authorization: Bearer Token
+
+Body:
+
+```
+{
+    "userName": "Yoga Hilmi Tasanah",
+    "emailAddress": "yogahilmi@mail.com",
+    "password": "12345678",
+    "accountNumber" : 8180620006,
+    "identityNumber" : 88181818
+}
+```
+
+**Delete User**
+
+> DELETE /api/user/{id}
+
+Authorization: Bearer Token

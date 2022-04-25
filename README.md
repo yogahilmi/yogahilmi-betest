@@ -45,11 +45,11 @@ docker-compose down --rmi all
 
 # API Documentation
 
-## Auth /api/auth
+## Auth /auth
 
 **Register User**
 
-> POST /api/auth/register
+> POST /auth/register
 
 Body:
 
@@ -65,7 +65,7 @@ Body:
 
 **Login User**
 
-> POST /api/auth/login
+> POST /auth/login
 
 Body:
 
@@ -76,23 +76,23 @@ Body:
 }
 ```
 
-## User /api/user/
+## User /user/
 
 **Get All Users**
 
-> GET /api/user
+> GET /user
 
 Authorization: Bearer Token
 
 **Get User By ID**
 
-> GET /api/user/{id}
+> GET /user/{id}
 
 Authorization: Bearer Token
 
 **Get User With Filter**
 
-> GET /api/user
+> GET /user
 
 Authorization: Bearer Token
 
@@ -105,7 +105,7 @@ identityNumber
 
 **Update User**
 
-> PATCH /api/user/{id}
+> PATCH /user/{id}
 
 Authorization: Bearer Token
 
@@ -123,6 +123,6 @@ Body:
 
 **Delete User**
 
-> DELETE /api/user/{id}
+> DELETE /user/{id}
 
 Authorization: Bearer Token
